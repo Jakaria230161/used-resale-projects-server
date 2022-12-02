@@ -95,7 +95,7 @@ async function run() {
       res.status(403).send({ accessToken: "" });
     });
 
-    //All category
+    //All category //
     app.get("/categories", async (req, res) => {
       const query = {};
       const cursors = categoriesCollection.find(query);
