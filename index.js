@@ -81,7 +81,7 @@ async function run() {
       next();
     };
 
-    // JWT
+    // JWT //
     app.get("/jwt", async (req, res) => {
       const email = req.query.email;
       const query = { email: email };
