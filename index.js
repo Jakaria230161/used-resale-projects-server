@@ -142,13 +142,6 @@ async function run() {
       res.send(result);
     });
 
-    //Seller add product
-    app.post("/addProduct", verifyJWT, verifySeller, async (req, res) => {
-      const product = req.body;
-      const result = await productsCollection.insertOne(product);
-      const id = res.send(result);
-    });
-
     //Get Advertise
     app.get("/advertise", async (req, res) => {
       const query = { advertise: true };
